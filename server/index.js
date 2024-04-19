@@ -21,10 +21,11 @@ const app = express();
 // here i specify that we accept connection from only localhost 3000
 // => if we use like this ==> app.use(cors("*")), it means we accept connection from anywhere 
 app.use(cors({
-    origin: ["http://localhost:3000", "http://localhost:3001"],
+    origin: ["http://localhost:3000", "http://localhost:3001", "https://swift-tasker.vercel.app", "https://swift-tasker-hrchb1dpe-pabitra-pals-projects.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
 }))
+// app.use(cors("*"))
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -39,6 +40,9 @@ app.use("/api", router);
 app.use(routeNotFound)
 app.use(errorHandler)
 
+app.get("/", (req, res) => {
+    res.send("Welcome to my backend service!");
+});
 
 app.listen(PORT, () => {
     console.log(`Server starting on ${PORT}`);

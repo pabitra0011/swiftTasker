@@ -9,7 +9,7 @@ export const dbConnection = async () => {
     } catch (err) {
         console.log("DB error" + err)
     }
-    89
+
 }
 
 
