@@ -40,6 +40,12 @@ app.use(cors({
 //     res.redirect("/api"); // Redirect to API documentation
 // });
 
+app.get("/", (req, res) => {
+    res.send("Welcome to my backend service!");
+});
+
+app.use("/", router)
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -47,7 +53,6 @@ app.use(cookieParser());
 
 app.use(morgan("dev"));
 
-app.use("/", router)
 
 // this below middleware is use, when you hit an endpoint url that does not exist , bleow is handle our all error
 app.use(routeNotFound)
