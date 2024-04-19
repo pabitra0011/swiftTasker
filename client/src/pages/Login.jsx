@@ -78,9 +78,9 @@ const Login = () => {
                         className='form-container w-full md:w-[400px] flex flex-col gap-y-8 bg-sky-50 px-10 pt-14 pb-14'
                     >
                         <div className=''>
-                            <p className='text-sky-600 text-3xl font-bold text-center'>সুইফটাস্কারে আপনাকে স্বাগতম  🙏</p>
+                            <p className='text-sky-600 text-3xl font-bold text-center'>Welcome Board</p>
                         </div>
-
+                        {/* সুইফটাস্কারে আপনাকে স্বাগতম  🙏 */}
                         <div className='flex flex-col gap-y-5'>
                             <Textbox
                                 placeholder="আপনার ইমেল আইডি লিখুন"
