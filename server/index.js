@@ -20,25 +20,20 @@ const app = express();
 
 // here i specify that we accept connection from only localhost 3000
 // => if we use like this ==> app.use(cors("*")), it means we accept connection from anywhere 
+// app.use(cors({
+//     origin: "*",
+//     methods: ["GET", "POST", "PUT", "DELETE"],
+//     credentials: true,
+// }));
+// app.use(cors());
 
 app.use(cors({
-    origin: ["http://localhost:3000", "http://localhost:3001", "https://swift-tasker.vercel.app", "https://swift-tasker-hrchb1dpe-pabitra-pals-projects.vercel.app"],
+    origin: ["http://localhost:3000", "http://localhost:3001", "https://swift-tasker.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
 }))
 
-// option 2 .......
-// const corsOptions = {
-//     origin: ["http://localhost:3000", "http://localhost:3001", "https://swift-tasker.vercel.app", "https://swift-tasker-hrchb1dpe-pabitra-pals-projects.vercel.app"],
-//     methods: ["GET", "POST", "PUT", "DELETE"],
-//     credentials: true,
-// };
 
-// app.use("/api", cors(corsOptions), router);
-
-// app.get("/", (req, res) => {
-//     res.redirect("/api"); // Redirect to API documentation
-// });
 
 
 app.use(express.json());
