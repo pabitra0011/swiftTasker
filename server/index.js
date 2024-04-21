@@ -28,7 +28,7 @@ const app = express();
 // app.use(cors());
 
 app.use(cors({
-    origin: ["http://localhost:3000", "http://localhost:3001", "https://swift-tasker.vercel.app"],
+    origin: ["http://localhost:3000", "http://localhost:3001", "https://swift-tasker.vercel.app", "https://swifttasker.onrender.com"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
 }))

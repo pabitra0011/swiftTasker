@@ -5,7 +5,7 @@ import User from '../models/user.js'
 const protectRoute = async (req, res, next) => {
     try {
         let token = req.cookies?.token;
-        // console.log(token)
+        console.log("auth middleware token", token)
         if (token) {
             const decodeToken = jwt.verify(token, process.env.JWT_SECRET);
 
