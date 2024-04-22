@@ -4,6 +4,9 @@ import User from '../models/user.js'
 
 const protectRoute = async (req, res, next) => {
     try {
+        console.log("Request Headers:", req.headers);
+        console.log("Request Cookies:", req.cookies);
+
         let token = req.cookies?.token;
         console.log("auth middleware token ==", token)
         if (token) {
