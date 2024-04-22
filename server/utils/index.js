@@ -23,9 +23,10 @@ export const createJWT = async (res, userId) => {
 
         res.cookie("token", token, {
             httpOnly: true,
-            secure: isProduction,
+            secure: true,
             sameSite: "strict",
-
+            domain: "https://swift-tasker.vercel.app",
+            path: '/'
         });
 
     } catch (error) {
