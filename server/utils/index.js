@@ -25,8 +25,6 @@ export const createJWT = async (res, userId) => {
             httpOnly: true,
             secure: true,
             sameSite: "none",
-            domain: ".vercel.app",
-            path: '/'
         });
 
     } catch (error) {
