@@ -9,6 +9,7 @@ const protectRoute = async (req, res, next) => {
 
         let token = req.cookies?.token;
         console.log("auth middleware token ==", token)
+
         if (token) {
             const decodeToken = jwt.verify(token, process.env.JWT_SECRET);
 

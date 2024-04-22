@@ -17,7 +17,7 @@ export const createJWT = async (res, userId) => {
     try {
         const isProduction = process.env.NODE_ENV === 'production';
 
-        const token = jwt.sign({ userId }, process.env.JWT_SECRET, { expiresIn: "30d" });
+        const token = jwt.sign({ userId }, process.env.JWT_SECRET);
 
         console.log("token generation:", token);
 
