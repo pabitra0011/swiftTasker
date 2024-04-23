@@ -25,7 +25,7 @@ export const createJWT = async (res, userId) => {
             httpOnly: true,
             secure: true,
             sameSite: "none",
-            domain: "https://swifttasker-1.onrender.com"
+            domain: isProduction ? ".swifttasker-1.onrender.com" : undefined
         });
 
     } catch (error) {
