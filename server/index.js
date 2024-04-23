@@ -44,9 +44,9 @@ app.use(cookieParser());
 
 app.use(morgan("dev"));
 
-// app.get("/", (req, res) => {
-//     res.send("Welcome to my backend service!");
-// });
+app.get("/", (req, res) => {
+    res.send("Welcome to my backend service!");
+});
 
 app.use("/api", router)
 
